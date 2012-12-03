@@ -1,0 +1,35 @@
+<h1>Score</h1>
+
+
+<table id='myscoretable' width='100%' border='1' class=''>
+ <tbody>
+ <tr>
+  <td><b>#</b></td>
+  <td><b>User</b></td>
+  <td><b>Name</b></td>
+  <% @contest.problems.each do |problem| %>
+	<td nowrap=''><%= problem.problemname %></td>
+  <% end %>
+	<td><b>Total</b></td>
+ </tr>
+<% @contest.teams.each do |team| %>
+ <tr class='sitegroup1'>
+ 	
+ 	<td><%=team.username %></td>
+
+ 	<td></td>
+ 	<td></td>
+  	<% @contest.problems.each do |problem| %>
+
+  		<td> <%= team.runs.select{|r| r.runproblem == problem.problemnumber}.first.answer.runanswer unless team.runs.select{|r| r.runproblem == problem.problemnumber}.first == nil %> </td>
+  	<% end %>
+
+
+ 	<td nowrap=''>1 (15)</td>
+
+ </tr>
+ <% end %>
+
+
+ </tr>
+</tbody></table>
