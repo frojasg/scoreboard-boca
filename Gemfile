@@ -12,13 +12,13 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'sass-rails',   '3.2.3'
+  gem 'coffee-rails', '3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '1.2.3'
 end
 
 group :test do
@@ -33,19 +33,23 @@ end
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
-  gem "rr"
   gem "factory_girl_rails", "~> 4.0"
   gem "capybara"
   gem "poltergeist"
-  gem "forgery"
-  gem "database_cleaner"
 
   gem 'jasmine'
   gem 'jasminerice'
   gem 'thin' # thin web server
+  gem 'guard-rspec', '0.5.5'
+  gem 'rb-fsevent', '0.9.3', :require => false
+  gem 'growl', '1.0.3'
+  gem 'spork', '0.9.2'
+  gem 'guard-spork', '1.5.1'
 end
 
-gem 'jquery-rails'
+
+
+gem 'jquery-rails', '3.0.4'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
