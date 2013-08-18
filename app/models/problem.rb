@@ -1,7 +1,7 @@
 class Problem < ActiveRecord::Base
   # attr_accessible :title, :body
-  set_table_name "problemtable"
-  set_primary_key "problemnumber"
+  self.table_name = "problemtable"
+  self.primary_key = "problemnumber"
 
   has_many :run, :class_name => "Run", :foreign_key => 'runproblem'
 

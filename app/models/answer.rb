@@ -1,5 +1,5 @@
 class Answer < ActiveRecord::Base
   # attr_accessible :title, :body
-  set_table_name "answertable"
-  set_primary_key "answernumber"
+  self.table_name = "answertable"
+  self.primary_key = "answernumber"
 end
